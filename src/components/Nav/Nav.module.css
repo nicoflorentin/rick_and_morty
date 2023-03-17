@@ -1,0 +1,22 @@
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	background-color: white;
+}
+
+.navLinksContainer {
+
+}
+
+.navLinks {
+	all: unset;
+	text-decoration: none;
+	cursor: pointer;
+	padding: 10px;
+	margin: 0 10px;
+	align-items: center;
+	border: 1px solid darkgrey;
+	border-radius: 10px;
+}

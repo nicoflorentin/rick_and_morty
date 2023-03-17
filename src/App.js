@@ -1,25 +1,76 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import styles from "./App.module.css";
+import Cards from "./components/Cards/Cards";
+import Nav from "./components/Nav/Nav";
+import About from "./components/About/About";
+import Detail from "./components/Detail/Detail";
+import Form from "./components/Form/Form";
+import Error from "./components/Error/Error";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const URL_API = "https://rickandmortyapi.com/api";
+const API_KEY = "12c293d7c01b.1fdc47930d06d48e2f63";
+const App = () => {
+	const [characters, setCharacters] = useState([]);
+	const [access, setAccess] = useState(false);
+	const navigate = useNavigate()	
+	const { pathname } = useLocation();
+
+	const userName = "nicoflorentin@mail.com";
+	const password = "pass123";
+
+	useEffect(() => {
+		!access && navigate('/')
+	}, [])
+	
+
+	const onSearch = (characterID) => {
+		fetch(`${URL_API}/character/${characterID}?key=${API_KEY}`)
+			.then((response) => response.json())
+			.then((data) => {
+				if (
+					data.name &&
+					!characters.find((char) => data.id === char.id)
+				) {
+					setCharacters((oldChars) => [...oldChars, data]);
+				} else {
+					window.alert("error");
+				}
+			});
+	};
+
+	const onClose = (id) => {
+		setCharacters(characters.filter((char) => char.id !== id));
+	};
+
+	const login = (userData) => {
+		if (userData.userName === userName && userData.password === password) {
+			setAccess(true)
+			navigate('/home')
+		} else {
+			alert('login incorrecto')
+		}
+	}
+
+	return (
+		<>
+			<div className={`${styles.App}`}>
+				{pathname !== "/" && <Nav onSearch={onSearch} />}
+				<Routes>
+					<Route path="/" element={<Form login={login}/>} />
+					<Route path="/about" element={<About />} />
+					<Route
+						path="/home"
+						element={
+							<Cards characters={characters} onClose={onClose} />
+						}
+					/>
+					<Route path="/detail/:id" element={<Detail />} />
+					<Route path="*" element={<Error />} />
+				</Routes>
+			</div>
+		</>
+	);
+};
 
 export default App;

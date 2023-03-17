@@ -1,0 +1,34 @@
+.cardContainer {
+	border: 1px solid black;
+	background-color: white;
+	border-radius: 10px;
+	width: 200px;
+	padding: 10px;
+
+	box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+		rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+		rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.cardButton {
+	background-color: white;
+	border: 0px;
+}
+
+img {
+	width: 90%;
+	border-radius: 10px;
+}
+
+.favButton {
+	all: unset;
+}
+
+.upperBar {
+	display: flex;
+	justify-content: space-between;
+}
+
+.charName {
+	text-decoration: none;
+}

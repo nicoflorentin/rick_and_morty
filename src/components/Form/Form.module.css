@@ -1,0 +1,38 @@
+.formContainer {
+	width: 400px;
+	margin: auto;
+	border: 1px solid transparent;
+	
+}
+
+.form {
+	margin-top: 100px;
+	background-color: white;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+
+
+.loginButton {
+	all: unset;
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+	margin-top: 50px;	
+}
+
+.loginButton:hover {
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+	background-color: rgba(254, 255, 189, 1);
+}
+
+.loginButton:active {
+	box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+	background-color: rgba(254, 255, 189, 1);
+}
+
+.img {
+	width: 150px;
+	margin-bottom: 20px;
+}

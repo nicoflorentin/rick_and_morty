@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./About.module.css";
-import morty from "../../icons/mortylogo.png";
+import morty from "../../images/mortylogo.png";
 
 const About = () => {
 	return (

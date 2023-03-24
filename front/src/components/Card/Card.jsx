@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actions from "../../redux/actions";
 import { useEffect, useState } from "react";
-import star from "../../icons/star.svg";
-import starFilled from "../../icons/star-filled.svg";
-import trash from '../../icons/trash.svg'
+import star from "../../images/star.svg";
+import starFilled from "../../images/star-filled.svg";
+import trash from '../../images/trash.svg'
 
 const Card = ({
 	name,
@@ -18,7 +18,6 @@ const Card = ({
 	addFavorite,
 	removeFavorite,
 }) => {
-	console.log(star);
 	const [isFav, setIsFav] = useState(false);
 
 	useEffect(() => {

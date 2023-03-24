@@ -1,0 +1,27 @@
+input {
+	all: unset;
+	margin: 0;
+	padding: 0;
+}
+
+.searchBar {
+	border-radius: 10px;
+	border:  1px solid darkgrey;
+	padding: 5px 0px;
+	width: 350px;
+	/* margin: auto; */
+}
+
+.searchButton {
+	all: unset;
+	cursor: pointer;
+}
+
+.randomButton {
+	all: unset;
+	margin-left: 20px;
+	background-color: yellow;
+	padding: 10px;
+	border-radius: 10px;
+	cursor: pointer;
+}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import style from "./Form.module.css";
 import validation from "./validation";
-import rick from "../../icons/rick.png";
+import rick from "../../images/rick.png";
 
 const Form = ({ login }) => {
 	const [userData, setUserData] = useState({

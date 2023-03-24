@@ -1,8 +1,9 @@
 import React from "react";
 import SearchBar from "../SearchBar/SearchBar";
+import SearchBarServer from "../SearchBarServer/SearchBarServer";
 import style from "./Nav.module.css";
 import { NavLink } from "react-router-dom";
-const Nav = ({ onSearch }) => {
+const Nav = ({ onSearch, onSearchServer }) => {
 	return (
 		<>
 			<div className={style.nav}>
@@ -14,7 +15,7 @@ const Nav = ({ onSearch }) => {
 					About
 				</NavLink>
         </div>
-
+				<SearchBarServer onSearchServer={onSearchServer}/>
 				<SearchBar onSearch={onSearch} />
 			</div>
 		</>

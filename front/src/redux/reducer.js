@@ -2,6 +2,7 @@ import { REMOVE_FAVORITE, ADD_FAVORITE } from "./actions";
 
 const initialState = {
 	myFavorites: [],
+	allCharacters: [],
 };
 
 const rootReducer = (state = initialState, action) => {

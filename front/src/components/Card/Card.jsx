@@ -18,8 +18,11 @@ const Card = ({
 	addFavorite,
 	removeFavorite,
 }) => {
+
+	// setea el estado de la card para saber si esta en favoritos
 	const [isFav, setIsFav] = useState(false);
 
+	//busca en el estado global redux si la carta esta en favoritos, en caso que si, setea el estado en true
 	useEffect(() => {
 		myFavorites.forEach((fav) => {
 			if (fav.id === id) {
@@ -28,6 +31,7 @@ const Card = ({
 		});
 	}, [myFavorites]);
 
+	//maneja los favoritos, si no esta setea true y lo pone en el estado y si esta setea false
 	const handleFavorite = () => {
 		if (isFav) {
 			setIsFav(false);
@@ -52,7 +56,7 @@ const Card = ({
 						className={style.favButton}
 						onClick={handleFavorite}
 					>
-						<img onClick={handleFavorite} src={star} alt="star" />
+						<img src={star} alt="star" />
 					</button>
 				)}
 				<button
@@ -65,8 +69,8 @@ const Card = ({
 				</button>
 			</div>
 			<br />
-			<img className={style.img} src={image} alt={`imagen ${image}`} />
 			<Link className={style.charName} to={`/detail/${id}`}>
+				<img className={style.img} src={image} alt={`imagen ${image}`} />
 				<strong> {name} </strong>
 			</Link>
 			<p>Species: {species}</p>
@@ -75,12 +79,15 @@ const Card = ({
 	);
 };
 
+//mapea el estado global a las props del componente. retorna un objeto con el nombre de la prop para hacer destructuring
 const mapStateToProps = (state) => {
 	return {
 		myFavorites: state.myFavorites,
 	};
 };
 
+//mapea la funcion que hace dispatch a las props. retorna un objeto con propiedades que tienen una funcion dentro que cada una retorna una 
+//hay que importar las actions y darle la capacidad de hacer dispatch
 const mapDispatchToProps = (dispatch) => {
 	return {
 		addFavorite: (character) => {
@@ -92,4 +99,5 @@ const mapDispatchToProps = (dispatch) => {
 	};
 };
 
+//conecta el componente con el estado global, hay que importar 'connect desde redux'
 export default connect(mapStateToProps, mapDispatchToProps)(Card);

@@ -23,7 +23,7 @@ const SearchBarServer = ({ onSearchServer }) => {
 				<button
 					className={styles.randomButton}
 					onClick={() => {
-						onSearchServer(Math.floor(Math.random() * 4 + 1));
+						onSearchServer(Math.floor(Math.random() * 825 + 1));
 						setId('')
 					}}
 				>

@@ -20,7 +20,7 @@ input {
 .randomButton {
 	all: unset;
 	margin-left: 20px;
-	background-color: yellow;
+	background-color: rgb(196, 231, 255);
 	padding: 10px;
 	border-radius: 10px;
 	cursor: pointer;

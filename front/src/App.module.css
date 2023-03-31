@@ -6,20 +6,19 @@
 
   min-height: 100vh;
   
-  -webkit-animation: bg-scrolling-reverse 5s infinite;
+  -webkit-animation: bg-scrolling-reverse 10s infinite;
   /* Safari 4+ */
-  -moz-animation: bg-scrolling-reverse 5s infinite;
+  -moz-animation: bg-scrolling-reverse 10s infinite;
   /* Fx 5+ */
-  -o-animation: bg-scrolling-reverse 5s infinite;
+  -o-animation: bg-scrolling-reverse 10s infinite;
   /* Opera 12+ */
-  animation: bg-scrolling-reverse 5s infinite;
+  animation: bg-scrolling-reverse 10s infinite;
   /* IE 10+ */
   -webkit-animation-timing-function: linear;
   -moz-animation-timing-function: linear;
   -o-animation-timing-function: linear;
   animation-timing-function: linear;
 
-  transition: 2s;
 }
 
 /* Animations */

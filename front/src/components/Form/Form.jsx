@@ -4,16 +4,20 @@ import validation from "./validation";
 import rick from "../../images/rick.png";
 
 const Form = ({ login }) => {
+
+	//setea un estado con los datos de los campos del fomulario
 	const [userData, setUserData] = useState({
 		userName: "",
 		password: "",
 	});
 
+	//setea un estado con strings que indican el tipo de error por campo del formulario
 	const [errors, setErrors] = useState({
 		userName: "",
 		password: "",
 	});
 
+	//guarda los valores de los campos en el estado, pisa los valores del objeto segun el nombre del value
 	const handleInputChange = (event) => {
 		const property = event.target.name;
 		const value = event.target.value;
@@ -22,10 +26,14 @@ const Form = ({ login }) => {
 			...userData,
 			[property]: value,
 		});
+
+		//ejecuta la funcion validadora, manda el objeto con los datos, el estado error, y la funcion de setear errores
 		validation({ ...userData, [property]: value }, errors, setErrors);
 	};
 
+
 	const handleSubmit = (event) => {
+		//preventDefault para evitar que la pagina se recargue cada vez que se hace un submit
 		event.preventDefault();
 		login(userData);
 	};

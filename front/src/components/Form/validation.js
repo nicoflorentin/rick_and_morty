@@ -1,4 +1,5 @@
 const validation = (form, errors, setErrors) => {
+	//username handler
 	if (!form.userName) {
 		setErrors({ ...errors, userName: 'Campo usuario vacío' });
 	} else if (form.userName.length > 35) {
@@ -14,6 +15,7 @@ const validation = (form, errors, setErrors) => {
 		setErrors({ ...errors, userName: "" });
 	}
 
+	//password handler
 	if (form.password.length < 6 || form.password.length > 10) {
 		setErrors({
 			...errors,

@@ -1,25 +1,27 @@
-.nav {
+.cardContainer {
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+	justify-content: start;
 	align-items: center;
 	padding: 10px;
-	background-color: white;
-
+	margin: 20px;
+	width: 400px;
+	border: 1px solid black;
+	border-radius: 10px;
+	background-color: rgb(236, 236, 153);
 	box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
 		rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
 		rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
-.navLinks {
-	all: unset;
-	text-decoration: none;
-	cursor: pointer;
-	padding: 10px;
-	margin: 0 10px;
-	align-items: center;
-	border: 1px solid darkgrey;
-	border-radius: 10px;
+.img {
+	width: 100px;
 }
-.favLink {
-	background-color: rgb(236, 236, 153);
+
+.charName {
+	all: unset;
+	font-size: 20px;
+	cursor: pointer;
+	margin-left: 10px;
+
 }

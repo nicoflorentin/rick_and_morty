@@ -49,7 +49,7 @@ const Card = ({
 						className={style.favButton}
 						onClick={handleFavorite}
 					>
-						<img src={starFilled} alt="star" />
+						<img className={style.image} src={starFilled} alt="star" />
 					</button>
 				) : (
 					<button
@@ -63,12 +63,12 @@ const Card = ({
 					className={style.cardButton}
 					onClick={() => {
 						onClose(id);
+						removeFavorite(id)
 					}}
 				>
 					<img src={trash} alt="" />
 				</button>
 			</div>
-			<br />
 			<Link className={style.charName} to={`/detail/${id}`}>
 				<img className={style.img} src={image} alt={`imagen ${image}`} />
 				<strong> {name} </strong>

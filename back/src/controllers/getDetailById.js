@@ -1,10 +1,10 @@
-const URL_API = "http://rickandmortyapi.com/api";
-const API_KEY = "12c293d7c01b.1fdc47930d06d48e2f63";
+const URL_API = process.env.URL_API
+const API_KEY = process.env.API_KEY
 
-const getDetailById = (req, res) => {
+const getDetailById = async (req, res) => {
 	try {
 		const { id } = req.params;
-		fetch(`${URL_API}/character/${id}?key=${API_KEY}`)
+		await fetch(`${URL_API}/character/${id}?key=${API_KEY}`)
 			.then((response) => response.json())
 			.then((response) => {
 				const { id, name, species, image, gender, origin } = response;

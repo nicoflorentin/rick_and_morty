@@ -6,7 +6,7 @@ const About = () => {
 	return (
 		<div className={style.container}>
 			<div className={style.content}>
-				<h1>About me</h1>
+				<h1>Sobre mí</h1>
 				<p>Mi nombre es Nicolás Florentín soy desarollador web</p>
 				<p>
 					Ésta aplicación consulta una base de datos basada en la

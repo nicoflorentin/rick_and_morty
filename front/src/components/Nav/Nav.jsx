@@ -20,7 +20,7 @@ const Nav = ({ onSearch, onSearchServer, logout }) => {
 				</div>
 				<SearchBarServer onSearchServer={onSearchServer} />
 				{/* <SearchBar onSearch={onSearch} /> */}
-				<button onClick={logout} className={style.navLinks}>Logout</button>
+				<button onClick={logout} className={`${style.navLinks} ${style.logoutBtn}`}>Logout</button>
 			</div>
 		</>
 	);

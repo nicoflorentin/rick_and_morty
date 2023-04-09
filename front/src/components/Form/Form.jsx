@@ -41,33 +41,33 @@ const Form = ({ login }) => {
 	return (
 		<div className={style.formContainer}>
 			<div className={style.form}>
-			<img className={style.img} src={rick} alt="" />
-			<form onSubmit={handleSubmit}>
-				<label htmlFor="userName">Username: </label>
-				<br />
-				<input
-					type="text"
-					name="userName"
-					value={userData.userName}
-					onChange={handleInputChange}
-					placeholder="nicoflorentin@mail.com"
-				/>
-				<p>{errors.userName}</p>
-				<label htmlFor="password">Password: </label>
-				<br />
-				<input
-					type="text"
-					name="password"
-					value={userData.password}
-					onChange={handleInputChange}
-					placeholder="pass123"
-				/>
-				<p>{errors.password}</p>
+				<img className={style.img} src={rick} alt="" />
+				<form onSubmit={handleSubmit}>
+					<label htmlFor="userName">Username</label>
+					<br />
+					<input
+						type="text"
+						name="userName"
+						value={userData.userName}
+						onChange={handleInputChange}
+						placeholder="nicoflorentin@mail.com"
+					/>
+					<p>{errors.userName}</p>
+					<label htmlFor="password">Password</label>
+					<br />
+					<input
+						type="text"
+						name="password"
+						value={userData.password}
+						onChange={handleInputChange}
+						placeholder="pass123"
+					/>
+					<p>{errors.password}</p>
 
-				<button className={style.loginButton} type="submit">
-					Login
-				</button>
-			</form>
+					<button className={style.loginButton} type="submit">
+						Login
+					</button>
+				</form>
 			</div>
 			
 		</div>

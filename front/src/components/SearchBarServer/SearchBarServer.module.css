@@ -15,6 +15,15 @@ input {
 .searchButton {
 	all: unset;
 	cursor: pointer;
+	padding: 10px;
+	border: 1px solid transparent;
+	border-radius: 10px;
+	transition: .2s;
+}
+
+.searchButton:hover {
+	border: 1px solid black;
+	
 }
 
 .randomButton {
@@ -24,4 +33,9 @@ input {
 	padding: 10px;
 	border-radius: 10px;
 	cursor: pointer;
+	transition: .2s;
+}
+
+.randomButton:hover {
+	background-color: rgb(145, 211, 255);
 }

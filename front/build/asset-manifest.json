@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1b639db9.css",
+    "main.js": "/static/js/main.317a67d8.js",
+    "static/media/rick.png": "/static/media/rick.38cb9c2d35b223237f73.png",
+    "static/media/bgrym.png": "/static/media/bgrym.ef31fdc7725c595a9a88.png",
+    "static/media/mortylogo.png": "/static/media/mortylogo.d299d9748ea4eca27d53.png",
+    "index.html": "/index.html",
+    "static/media/star-filled.svg": "/static/media/star-filled.ec3882b630b11c7dcefbc6abab38e722.svg",
+    "static/media/trash.svg": "/static/media/trash.c66298b0b41908b6b6ed7ee9e5aef3a6.svg",
+    "static/media/star.svg": "/static/media/star.c30837ad5355c1d9d29be127871229eb.svg",
+    "static/media/arrow-left.svg": "/static/media/arrow-left.930c09b77c1b6bc309cdaee0873a3a43.svg",
+    "main.1b639db9.css.map": "/static/css/main.1b639db9.css.map",
+    "main.317a67d8.js.map": "/static/js/main.317a67d8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1b639db9.css",
+    "static/js/main.317a67d8.js"
+  ]
+}

@@ -72,7 +72,7 @@ const App = () => {
 
 	//login handler, se pasa por props hasta el formulario
 	const login = (userData) => {
-		if (userData.userName === userName && userData.password === password) {
+		if (userData.userName.toLowerCase() === userName && userData.password === password) {
 			setAccess(true);
 			navigate("/home");
 		} else {

@@ -23,18 +23,23 @@ const rootReducer = (state = initialState, action) => {
 				),
 				allCharacters: state.allCharacters.filter(
 					(char) => char.id !== action.payload
-				)
-
+				),
 			};
 		case FILTER:
-			const { allCharacters: filterAll } = state;
-			const filtered = filterAll.filter(
-				(char) => char.gender === action.payload
-			);
-			return {
-				...state,
-				myFavorites: filtered,
-			};
+			console.log(action.payload)
+			if (action.payload === "All") {
+				return {...state,
+				myFavorites: state.allCharacters}
+			} else {
+				const { allCharacters: filterAll } = state;
+				const filtered = filterAll.filter(
+					(char) => char.gender === action.payload
+				);
+				return {
+					...state,
+					myFavorites: filtered,
+				};
+			}
 		case ORDER:
 			const orderAllCharacters = [...state.allCharacters];
 			const sorted = orderAllCharacters.sort((a, b) => {

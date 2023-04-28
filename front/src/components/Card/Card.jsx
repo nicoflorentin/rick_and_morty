@@ -73,8 +73,8 @@ const Card = ({
 				<img className={style.img} src={image} alt={`imagen ${image}`} />
 				<strong> {name} </strong>
 			</Link>
-			<p>Species: {species}</p>
-			<p>Gender: {gender}</p>
+			<p>{species}</p>
+			<p>{gender}</p>
 		</div>
 	);
 };

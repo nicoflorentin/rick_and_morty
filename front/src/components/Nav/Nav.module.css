@@ -22,7 +22,6 @@
 	margin: 0 10px;
 	align-items: center;
 	border-radius: 10px;
-	transition: .2s;
 }
 
 .navLinks:hover {
@@ -33,11 +32,11 @@
 	background-color: rgb(236, 236, 153);
 }
 
-.logoutBtn:hover {
-	background-color: rgb(255, 57, 57);
-	color: white
-}
-
 .favLink:hover {
 	background-color: yellow;
+}
+
+.logoutBtn:hover {
+	background-color: rgb(255, 57, 57);
+	color: white;
 }

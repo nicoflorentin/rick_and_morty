@@ -1,5 +1,5 @@
 .container {
-	/* padding: 0 20px 20px 20px; */
+	padding-top: 10px;
 	width: 500px;
 	height: 270px;
 	margin: auto;
@@ -33,9 +33,9 @@ button {
 .arrowLeft {
 	margin-left: 20px;
 	width: 30px;
+	transition: .1s;
 }
 
-.description {
-	/* padding: 0 10px; */
+.arrowLeft:hover {
+	transform: scale(1.3);
 }
-

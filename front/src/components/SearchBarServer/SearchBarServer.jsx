@@ -10,7 +10,7 @@ const SearchBarServer = ({ onSearchServer }) => {
 	return (
 		<>
 			<div className={styles.searchBar}>
-				<input type="search" onChange={handleChange} placeholder='1-826 id to server! 🚀' />
+				<input type="search" value={id} onChange={handleChange} placeholder='1-826 id to server! 🚀' />
 				<button
 					className={styles.searchButton}
 					onClick={() => {

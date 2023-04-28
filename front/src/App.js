@@ -23,10 +23,29 @@ const App = () => {
 	const userName = "nicoflorentin@mail.com";
 	const password = "pass123";
 
+	const URL_API='https://rickandmortyapi.com/api'
+	const API_KEY='API_KEY=12c293d7c01b.1fdc47930d06d48e2f63'
+
 	//si no hay acceso nunca va a navegar al /home
 	useEffect(() => {
 		!access && navigate("/");
 	}, []);
+
+	const onSearch = (id) => {
+		fetch(`${URL_API}/character/${id}?key=${API_KEY}`)
+			.then((res) => res.json())
+			.then((data) => {
+				if (
+					data.name &&
+					!characters.find((char) => data.id === char.id)
+				) {
+					// si pongo un argumento dentro de la callback del setState, éste recibe el estado actual
+					setCharacters((oldChars) => [...oldChars, data]);
+				} else {
+					console.log("error");
+				}
+			});
+	}
 
 	//lo mismo pero lo trae de mi backend
 	const onSearchServer = (characterID) => {
@@ -40,7 +59,7 @@ const App = () => {
 					// si pongo un argumento dentro de la callback del setState, éste recibe el estado actual
 					setCharacters((oldChars) => [...oldChars, data]);
 				} else {
-					window.alert("error");
+					console.log("error");
 				}
 			});
 	};
@@ -66,22 +85,6 @@ const App = () => {
 		navigate("/");
 	};
 
-	// const testFetchPost = () => {
-	// 	const data = {
-	// 		nombre: "Nicolas",
-	// 		apellido: "Florentin",
-	// 	};
-
-	// 	axios
-	// 		.post("http://localhost:3001/rickandmorty/test/post", data)
-	// 		.then((response) => {
-	// 			console.log("Respuesta del servidor:", response.data);
-	// 		})
-	// 		.catch((error) => {
-	// 			console.error("Error al enviar la solicitud:", error);
-	// 		});
-	// }; ${styles.crt}
-
 	return (
 		<>
 			<div className={`${styles.App}`}>
@@ -89,6 +92,7 @@ const App = () => {
 				{pathname !== "/" && (
 					<Nav
 						onSearchServer={onSearchServer}
+						onSearch={onSearch}
 						logout={logout}
 					/>
 				)}

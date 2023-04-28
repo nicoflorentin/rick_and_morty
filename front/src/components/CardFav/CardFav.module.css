@@ -3,19 +3,23 @@
 	flex-direction: column;
 	justify-content: start;
 	align-items: center;
-	padding: 10px;
+	padding: 5px;
 	margin: 20px;
-	width: 400px;
 	border: 1px solid black;
 	border-radius: 10px;
 	background-color: rgb(236, 236, 153);
 	box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
 		rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
 		rgba(0, 0, 0, 0.09) 0px 32px 16px;
+	transition: .2s;
+}
+
+.cardContainer:hover {
+	transform: scale(1.1);
 }
 
 .img {
-	width: 100px;
+	width: 270px;
 }
 
 .charName {
@@ -23,5 +27,4 @@
 	font-size: 20px;
 	cursor: pointer;
 	margin-left: 10px;
-
 }

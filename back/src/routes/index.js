@@ -5,11 +5,11 @@ const getDetailById = require("../controllers/getDetailById");
 
 const router = Router()
 
-router.get("/test/", (req, res) => {
-	const {query} = req.query
-	console.log(query)
-	res.send('router andando')
-});
+// router.get("/test/", (req, res) => {
+// 	const {query} = req.query
+// 	console.log(query)
+// 	res.send('router andando')
+// });
 
 router.post('/rickandmorty/test/post', (req, res) => {
 	const data = req.body
